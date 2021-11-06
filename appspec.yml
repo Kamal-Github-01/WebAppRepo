@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.0
 os: linux
 files:
   - source: /app.js
@@ -21,4 +21,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
-
