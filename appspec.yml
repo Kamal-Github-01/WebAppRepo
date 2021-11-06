@@ -8,14 +8,17 @@ files:
   - source: /index.html
     destination: /var/www/html/
   - source: /page.html
-    destination: /var/www/html/ 
+    destination: /var/www/html/
 hooks:
-   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+  BeforeInstall:
+    - location: scripts/install_dependencies
       timeout: 300
       runas: root
-  ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
       timeout: 300
       runas: root
 
