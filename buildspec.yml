@@ -13,8 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Static website... copying files...
-      - echo "Running tests"      
-      - grep -Fq "works" index.html      
+      - echo "Running tests"     
   post_build:
     commands:
       - echo "Post build phase"
